@@ -2,29 +2,12 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusSquare, faEdit, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 
-const Button = ({ action, onClick }) => {
-    switch (action) {
-        case 'Add':
-            return (
-                <StyledButton onClick={onClick}>
-                    <FontAwesomeIcon icon={faPlusSquare} />
-                </StyledButton>
-            )
-        case 'Edit':
-            return (
-                <StyledButton onClick={onClick}>
-                    <FontAwesomeIcon icon={faEdit} />
-                </StyledButton>
-            )
-        case 'Delete':
-            return (
-                <StyledButton onClick={onClick}>
-                    <FontAwesomeIcon icon={faTrashAlt} />
-                </StyledButton>
-            )
-        default:
-            return <StyledButton />
-    }
+const Button = ({ icon, onClick }) => {
+    return (
+        <StyledButton onClick={onClick}>
+            <FontAwesomeIcon icon={icon} />
+        </StyledButton>
+    )
 }
 
 const StyledButton = styled.button`
