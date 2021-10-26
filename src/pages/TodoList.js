@@ -14,8 +14,10 @@ const TodoList = () => {
 
   const dispatch = useDispatch()
   const data = useSelector(selectList, shallowEqual);
+  console.log(data);
 
   const newId = data?.map(el => el.id).length ? Math.max(...data?.map(el => el.id)) + 1 : 1
+
 
   const addNewTodo = () => {
     if (text === '') return

@@ -12,7 +12,8 @@ const Input = styled.input`
   outline: unset;
   font-size: 18px;
   margin-left: 5px;
-
+  text-overflow: ellipsis;
+  
   ::placeholder {
     color: #6F6F6F
   }
