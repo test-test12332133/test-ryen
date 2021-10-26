@@ -23,9 +23,9 @@ export const createTodoItem = (item) => (dispatch, getState) => {
             type: CREATE_TODO_ITEM_START,
             payload: [],
         })
-        return dispatch({
+        dispatch({
             type: CREATE_TODO_ITEM_SUCCESS,
-            payload: getState().list.push(item),
+            payload: [...getState().list.data, item],
         })
     }
     catch (err) {
@@ -82,7 +82,7 @@ export const editTodoItem = (id, text) => (dispatch, getState) => {
             type: EDIT_TODO_ITEM_START,
             payload: [],
         })
-        return dispatch({
+        dispatch({
             type: EDIT_TODO_ITEM_SUCCESS,
             payload: getState().list.findIndex(el => el.id === id).text = text,
         })

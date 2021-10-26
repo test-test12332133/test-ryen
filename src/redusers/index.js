@@ -31,7 +31,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 list: {
-                    data: [],
+                    ...state.list,
                     isLoading: true,
                     error: false,
                 }
@@ -51,7 +51,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 list: {
-                    data: [],
+                    ...state.list,
                     isLoading: false,
                     error: action.error,
                 }
@@ -62,7 +62,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 list: {
-                    data: [],
+                    ...state.list,
                     isLoading: true,
                     error: false,
                 }
@@ -82,7 +82,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 list: {
-                    data: [],
+                    ...state.list,
                     isLoading: false,
                     error: action.error,
                 }
@@ -92,7 +92,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 list: {
-                    data: [],
+                    ...state.list,
                     isLoading: true,
                     error: false,
                 }
@@ -112,7 +112,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 list: {
-                    data: [],
+                    ...state.list,
                     isLoading: false,
                     error: action.error,
                 }
@@ -122,7 +122,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 list: {
-                    data: [],
+                    ...state.list,
                     isLoading: true,
                     error: false,
                 }
@@ -142,7 +142,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 list: {
-                    data: [],
+                    ...state.list,
                     isLoading: false,
                     error: action.error,
                 }
