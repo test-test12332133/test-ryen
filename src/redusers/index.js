@@ -26,7 +26,6 @@ const initialState = {
 }
 
 function reducer(state = initialState, action) {
-    console.log(action);
     switch (action.type) {
         case CREATE_TODO_ITEM_START: {
             return {
@@ -70,7 +69,6 @@ function reducer(state = initialState, action) {
             }
         }
         case CHECK_TODO_ITEM_SUCCESS: {
-            console.log(action.payload);
             return {
                 ...state,
                 list: {
