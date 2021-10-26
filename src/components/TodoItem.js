@@ -29,7 +29,12 @@ const TodoItem = ({ text, id, isChecked, onClickCheckbox }) => {
                 isItem
                 disabled={isChecked}
             />
-            <Button icon={faTrashAlt} onClick={deleteTodo} color='#d6d1d1' bgColor='transparent' hoverColor='#9a9a9a' />
+            <Button
+                icon={faTrashAlt}
+                onClick={deleteTodo}
+                color='#d6d1d1'
+                bgColor='transparent'
+                hoverColor='#9a9a9a' />
         </Wrapper>
     )
 }

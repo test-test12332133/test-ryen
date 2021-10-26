@@ -9,28 +9,28 @@ const Checkbox = ({ onChange }) => (
 
 const StyledCheckbox = styled.input`
   position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-      :hover ~ span {
-        border: 1px solid #1F49AD;
-      }
-      :checked ~ span {
-        background-color: #1F49AD;
-        border: 1px solid #1F49AD;
-      }
-      :checked ~ span:after {
-        display: block;
-      }
-      :disabled ~ span {
-        background-color: #F2F2F5;
-        border: 1px solid #BEBEC4;
-      }
-      :disabled ~span:after {
-        border: solid #BEBEC4;
-        border-width: 0 2px 2px 0;
-      }
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+    :hover ~ span {
+      border: 1px solid #1F49AD;
+    }
+    :checked ~ span {
+      background-color: #1F49AD;
+      border: 1px solid #1F49AD;
+    }
+    :checked ~ span:after {
+      display: block;
+    }
+    :disabled ~ span {
+      background-color: #F2F2F5;
+      border: 1px solid #BEBEC4;
+    }
+    :disabled ~span:after {
+      border: solid #BEBEC4;
+      border-width: 0 2px 2px 0;
+    }
 `
 
 const StyledLabel = styled.label`

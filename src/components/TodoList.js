@@ -13,7 +13,7 @@ const TodoList = () => {
   const [text, setText] = useState('')
 
   const dispatch = useDispatch()
-  const { data } = useSelector(selectList, shallowEqual);
+  const data = useSelector(selectList, shallowEqual);
 
   const newId = data?.map(el => el.id).length ? Math.max(...data?.map(el => el.id)) + 1 : 1
 
@@ -41,7 +41,13 @@ const TodoList = () => {
           placeholder='Add a task'
           background='#EBEBEB'
         />
-        <Button text='Add Task' onClick={addNewTodo} bgColor='#849FFF' color='black' width='74px' hoverColor='#fff' />
+        <Button
+          text='Add Task'
+          onClick={addNewTodo}
+          bgColor='#849FFF'
+          color='black'
+          width='74px'
+          hoverColor='#fff' />
       </Wrapper>
       <Wrapper shadow direction='column' display={!data.length ? 'none' : 'flex'} width='300px'>
         {data.map((el) => (
