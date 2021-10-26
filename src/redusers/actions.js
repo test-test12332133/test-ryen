@@ -44,8 +44,8 @@ export const checkTodoItem = (id) => (dispatch, getState) => {
         })
         return dispatch({
             type: CHECK_TODO_ITEM_SUCCESS,
-            payload: getState().list.map(el =>
-                el.id === id ? { ...el, completed: !el.completed } : el,
+            payload: getState().list.data.map(el => 
+                el.id === id ? { ...el, isChecked: !el.isChecked } : el,
             )
         })
     }
@@ -65,7 +65,7 @@ export const deleteTodoItem = (id) => (dispatch, getState) => {
         })
         return dispatch({
             type: DELETE_TODO_ITEM_SUCCESS,
-            payload: getState().list.filter(el => el.id !== id),
+            payload: getState().list.data.filter((el => el.id !== id)),
         })
     }
     catch (err) {
@@ -84,7 +84,7 @@ export const editTodoItem = (id, text) => (dispatch, getState) => {
         })
         dispatch({
             type: EDIT_TODO_ITEM_SUCCESS,
-            payload: getState().list.findIndex(el => el.id === id).text = text,
+            payload: getState().list.data.find(el => el.id === id).text = text,
         })
     }
     catch (err) {
