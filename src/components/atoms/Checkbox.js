@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Checkbox = ({ onChange }) => (
   <StyledLabel onChange={onChange} >
-    <StyledCheckbox type="checkbox" />
+    <StyledCheckbox type='checkbox' />
     <StyledSpan />
   </StyledLabel>
 )
@@ -66,7 +66,7 @@ const StyledSpan = styled.span`
   border: 1px solid #BEBEC4;
 
   :after {
-    content: "";
+    content: '';
     position: absolute;
     display: none;
   }

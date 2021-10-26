@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useState } from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
-import Wrapper from "./atoms/Wrapper";
-import Input from "./atoms/Input";
+import Wrapper from './atoms/Wrapper';
+import Input from './atoms/Input';
 import Button from './atoms/Button';
-import TodoItem from "./TodoItem";
+import TodoItem from './TodoItem';
 
-import { selectList } from "../redusers/selectors";
-import { createTodoItem, checkTodoItem } from "../redusers/actions";
+import { selectList } from '../redusers/selectors';
+import { createTodoItem, checkTodoItem } from '../redusers/actions';
 
 const TodoList = () => {
   const [text, setText] = useState('')
