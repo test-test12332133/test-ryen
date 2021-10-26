@@ -38,7 +38,7 @@ function reducer(state = initialState, action) {
         case EDIT_TODO_ITEM: {
             return {
                 ...state,
-                list: state.list.data.find(el => el.id === action.payload.id).text = action.payload.text,
+                list: state.list.find(el => el.id === action.payload.id).text = action.payload.text,
             }
         }
 
