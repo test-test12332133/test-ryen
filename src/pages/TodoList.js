@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
-import Wrapper from './atoms/Wrapper';
-import Input from './atoms/Input';
-import Button from './atoms/Button';
-import TodoItem from './TodoItem';
+import Wrapper from '../components/atoms/Wrapper';
+import Input from '../components/atoms/Input';
+import Button from '../components/atoms/Button';
+import TodoItem from '../components/TodoItem';
 
 import { selectList } from '../redusers/selectors';
 import { createTodoItem, checkTodoItem } from '../redusers/actions';
